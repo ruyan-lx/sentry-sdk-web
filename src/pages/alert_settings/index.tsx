@@ -62,7 +62,7 @@ const AlertSettings = () => {
     return (
         <>
             {contextHolder}
-            <Row>
+            <Row gutter={[6,6]}>
                 <Col xs={24} sm={12} md={8}>
                     <Card>
                         <EditableInputNumber title="用户行为收集阈值" value={value} onChange={setValue} submit={submit}></EditableInputNumber>

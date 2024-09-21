@@ -42,14 +42,14 @@ const SystemErrorDetailBehavior = () => {
                     </Card>
                 </Col>
             </Row>
-            <Card title='报错前用户操作记录' >
-                <Row>
+            <Card title='报错前用户操作记录' className="mt-4">
+                <Row gutter={6}>
                     <Col xs={24} sm={12}>
                         <Card title={'共' + data.length + '条记录'} loading={pageLoading}>
                             <div className='overflow-y-auto h-80'>
                                 {
                                     data.map((item, index) => (
-                                        <div key={item.uuid} className={`p-2 mb-2 border-b-2 cursor-pointer ${selected === index ? 'bg-blue-100' : ''}`} onClick={() => recordItemClick(item, index)}>
+                                        <div key={item.uuid} className={`p-2 mb-2 border-dashed border-b-2 cursor-pointer hover:bg-blue-100 ${selected === index ? 'bg-blue-100 font-semibold' : ''}`} onClick={() => recordItemClick(item, index)}>
                                             <p>{item.uuid}</p>
                                             <p>{dayjs(item.timestamp).format('YYYY-MM-DD HH:mm:ss')}</p>
                                             <p>{E_TrackerDetailType[item.type]}</p>

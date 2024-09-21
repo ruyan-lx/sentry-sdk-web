@@ -267,7 +267,7 @@ const PTopTenData: echarts.EChartsOption = {
 const TrafficData = () => {
     return (
         <>
-            <Card title="流量数据" bordered={false}>
+            <Card title="流量数据" bordered={false} className="mb-2">
                 <div className="flex gap-2 bg-gray-100 p-2">
                     <Card className="flex-1" bordered={false}>
                         <Statistic
@@ -287,16 +287,16 @@ const TrafficData = () => {
                     </Card>
                 </div>
             </Card>
-            <Card title="页面访问量趋势">
+            <Card title="页面访问量趋势" className="mb-2">
                 <ConcentrationDurationDistributionEcharts options={pageOptions} style={{ 'width': '100%', 'height': '240px' }}></ConcentrationDurationDistributionEcharts>
             </Card>
-            <Card title="用户活跃量趋势">
+            <Card title="用户活跃量趋势" className="mb-2">
                 <ConcentrationDurationDistributionEcharts options={userOptions} style={{ 'width': '100%', 'height': '240px' }}></ConcentrationDurationDistributionEcharts>
             </Card>
-            <Card title="页面访问量Top 10">
+            <Card title="页面访问量Top 10" className="mb-2">
                 <ConcentrationDurationDistributionEcharts options={PTopTenData} style={{ 'width': '100%', 'height': '400px' }}></ConcentrationDurationDistributionEcharts>
             </Card>
-            <Card title="设备分辨率量Top 10">
+            <Card title="设备分辨率量Top 10" className="mb-2">
                 <ConcentrationDurationDistributionEcharts options={UTopTenData} style={{ 'width': '100%', 'height': '400px' }}></ConcentrationDurationDistributionEcharts>
             </Card>
         </>

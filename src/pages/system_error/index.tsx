@@ -53,7 +53,7 @@ const SystemError = () => {
     return (
         <Card>
             <Table dataSource={data} columns={columns} pagination={{
-                pageSize: 5,
+                pageSize: 10,
                 total: data.length,
                 onChange: handleSearch
             }} loading={loading} />

@@ -1,7 +1,7 @@
 import { Card } from 'antd';
 import axios from 'axios';
 import { isArray } from 'lodash-unified';
-import { useEffect, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 import rrwebPlayer from 'rrweb-player';
 import 'rrweb-player/dist/style.css';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -41,7 +41,9 @@ const SystemErrorDetailRrwebUrl = () => {
     }, [rrwebUrl])
 
     return (
-        <Card id="player" loading={pageLoading} extra={<CloseOutlined onClick={() => navigator(-1)} />}>
+        <Card title='回放' loading={pageLoading} extra={<CloseOutlined onClick={() => navigator(-1)} />}>
+            <div id="player" className='flex items-center justify-center'>
+            </div>
         </Card>
     )
 }

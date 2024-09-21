@@ -79,10 +79,10 @@ const HealthStatus = () => {
 
     return (
         <>
-            <Card bordered={false}>
+            <Card bordered={false} className="mb-2">
                 <Row>
                     <Col xs={24} sm={6}>
-                        <Card title='健康状态'>
+                        <Card title='健康状态' className="mr-2">
                             <div className="w-40">
                                 <Badge.Ribbon text="健康" color="green">
                                     <Progress status="success" type="circle" percent={96} format={(percent) => `${percent}分`} />
@@ -118,7 +118,7 @@ const HealthStatus = () => {
                     </Col>
                 </Row>
             </Card>
-            <Row>
+            <Row gutter={[6,6]}>
                 <Col xs={24} md={12} lg={8}>
                     <Card title="js报错" extra={<Button onClick={() => navigator('/index/system_error')} icon={<EyeOutlined />}>详情</Button>}>
                         <ConcentrationDurationDistributionEcharts options={pageOptions} style={{ 'width': '100%', 'height': '240px' }}></ConcentrationDurationDistributionEcharts>
