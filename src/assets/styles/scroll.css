@@ -1,0 +1,24 @@
+/* Hide scrollbar in all modern browsers */
+
+* {
+    overflow: auto;
+    /* Ensure content is scrollable */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+*::-webkit-scrollbar {
+    display: none;
+    /* WebKit and Blink engines */
+}
+
+
+/* Hide scrollbar on the root element */
+
+html,
+body {
+    overflow: hidden;
+    /* Optionally hide the main page scrollbar */
+}
